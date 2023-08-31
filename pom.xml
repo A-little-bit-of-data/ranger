@@ -173,14 +173,14 @@
         <metrics.core.version>3.0.2</metrics.core.version>
         <mockito.version>3.0.0</mockito.version>
         <mockito.all.version>1.10.19</mockito.all.version>
-        <mysql-connector-java.version>5.1.31</mysql-connector-java.version>
+        <mysql-connector-java.version>8.0.31</mysql-connector-java.version>
         <netty-all.version>4.1.78.Final</netty-all.version>
         <noggit.version>0.8</noggit.version>
         <orc.core.version>1.6.7</orc.core.version>
         <owasp-java-html-sanitizer.version>r239</owasp-java-html-sanitizer.version>
         <paranamer.version>2.3</paranamer.version>
         <presto.version>333</presto.version>
-        <trino.version>377</trino.version>
+        <trino.version>425</trino.version>
         <poi.version>5.2.2</poi.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <protobuf-java.version>3.19.3</protobuf-java.version>
