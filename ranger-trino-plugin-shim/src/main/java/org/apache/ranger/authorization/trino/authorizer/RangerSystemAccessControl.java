@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 package org.apache.ranger.authorization.trino.authorizer;
-
+import com.google.common.collect.ImmutableMap;
 import io.trino.spi.connector.CatalogSchemaName;
 import io.trino.spi.connector.CatalogSchemaRoutineName;
 import io.trino.spi.connector.CatalogSchemaTableName;
@@ -104,10 +104,10 @@ public class RangerSystemAccessControl
   }
 
   @Override
-  public void checkCanCreateSchema(SystemSecurityContext context, CatalogSchemaName schema) {
+  public void checkCanCreateSchema(SystemSecurityContext context, CatalogSchemaName schema,Map<String, Object> properties) {
     try {
       activatePluginClassLoader();
-      systemAccessControlImpl.checkCanCreateSchema(context, schema);
+      systemAccessControlImpl.checkCanCreateSchema(context, schema,ImmutableMap.of());
     } finally {
       deactivatePluginClassLoader();
     }
@@ -517,17 +517,17 @@ public class RangerSystemAccessControl
     }
   }
 
-  @Override
-  public Optional<ViewExpression> getRowFilter(SystemSecurityContext context, CatalogSchemaTableName tableName) {
-    Optional<ViewExpression> viewExpression;
-    try {
-      activatePluginClassLoader();
-      viewExpression = systemAccessControlImpl.getRowFilter(context, tableName);
-    } finally {
-      deactivatePluginClassLoader();
-    }
-    return viewExpression;
-  }
+  // @Override
+  // public Optional<ViewExpression> getRowFilter(SystemSecurityContext context, CatalogSchemaTableName tableName) {
+  //   Optional<ViewExpression> viewExpression;
+  //   try {
+  //     activatePluginClassLoader();
+  //     viewExpression = systemAccessControlImpl.getRowFilter(context, tableName);
+  //   } finally {
+  //     deactivatePluginClassLoader();
+  //   }
+  //   return viewExpression;
+  // }
 
   @Override
   public List<ViewExpression> getRowFilters(SystemSecurityContext context, CatalogSchemaTableName tableName) {
