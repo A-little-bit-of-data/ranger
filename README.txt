@@ -94,18 +94,10 @@ Installation Host Information
 
 Installation Process
 ~~~~~~~~~~~~~~~~~~~~
+1、安装jvm17
+sdk list java
+sdk install java 17.0.8-albba
 
-1. Download the tar.gz file into a temporary folder in the box where it needs to be installed.
 
-2. Expand the tar.gz file into /usr/lib/ranger/ folder
-
-3. Go to the component name under the expanded folder (e.g. /usr/lib/ranger/ranger-<version-number>-admin/)
-
-4. Modify the install.properties file with appropriate variables
-
-5. If the module has setup.sh, 
-       Execute ./setup.sh
-
-   If the install.sh file does not exists, 
-       Execute ./enable-<component>-plugin.sh
+2、mvn clean install -DskipTests -Drat.skip=true -P ranger-jdk17
 

@@ -260,12 +260,12 @@
        
 
         <profile>
-            <id>ranger-jdk11</id>
+            <id>ranger-jdk17</id>
             <activation>
                 <property>                     
-		            <name>ranger-jdk11</name>                
+		            <name>ranger-jdk17</name>                
 	            </property>
-               <jdk>11</jdk>
+               <jdk>17</jdk>
             </activation>
             <modules>
                 <module>jisql</module>
