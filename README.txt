@@ -99,5 +99,7 @@ sdk list java
 sdk install java 17.0.8-albba
 
 
-2、mvn clean install -DskipTests -Drat.skip=true -P ranger-jdk17
+2、mvn clean install -DskipTests -Drat.skip=true -P ranger-jdk17 
+
+mvn clean install -DskipTests -Drat.skip=true -P ranger-jdk17 -Dpmd.skip=true -Dcheckstyle.skip=true
 
