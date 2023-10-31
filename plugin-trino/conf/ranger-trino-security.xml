@@ -50,7 +50,7 @@
 
   <property>
     <name>ranger.plugin.trino.policy.pollIntervalMs</name>
-    <value>30000</value>
+    <value>10000</value>
     <description>
       How often to poll for changes in policies?
     </description>
