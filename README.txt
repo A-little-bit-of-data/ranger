@@ -96,7 +96,7 @@ Installation Process
 ~~~~~~~~~~~~~~~~~~~~
 1、安装jvm17
 sdk list java
-sdk install java 17.0.8-albba
+sdk install java 17.0.11-tem
 
 
 2、mvn clean install -DskipTests -Drat.skip=true -P ranger-jdk17 
