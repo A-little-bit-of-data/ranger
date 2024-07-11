@@ -310,7 +310,7 @@ public class HiveClient extends BaseClient implements Closeable {
                             stat = con.createStatement();
                             rs = stat.executeQuery(sql);
 							while (rs.next()) {
-                                String tblName = rs.getString(1);
+                                String tblName = rs.getString(2);
 								if (tblList != null	&& tblList.contains(tblName)) {
                                     continue;
                                 }
