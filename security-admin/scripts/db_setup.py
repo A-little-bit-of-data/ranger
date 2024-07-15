@@ -849,7 +849,7 @@ class MysqlConf(BaseDB):
 					db_ssl_cert_param=" -Djavax.net.ssl.keyStore=%s -Djavax.net.ssl.keyStorePassword=%s -Djavax.net.ssl.trustStore=%s -Djavax.net.ssl.trustStorePassword=%s " %(self.javax_net_ssl_keyStore,self.javax_net_ssl_keyStorePassword,self.javax_net_ssl_trustStore,self.javax_net_ssl_trustStorePassword)
 		else:
 			if "useSSL" not in db_name:
-				db_ssl_param="?useSSL=false"
+				db_ssl_param="?useSSL=false&allowPublicKeyRetrieval=true"
 		self.JAVA_BIN = self.JAVA_BIN.strip("'")
 		if is_unix:
 			if self.is_db_override_jdbc_connection_string == 'true' and self.db_override_jdbc_connection_string is not None and len(self.db_override_jdbc_connection_string) > 0:
